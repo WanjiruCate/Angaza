@@ -1,4 +1,4 @@
-package com.shirucodes.angaza.UserInterface;
+package com.shirucodes.angaza.SplashView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
