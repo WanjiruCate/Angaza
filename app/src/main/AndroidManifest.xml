@@ -9,8 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UserInterface.SplashScreen"></activity>
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".UserInterface.StartScreen"
+            android:label="@string/title_activity_start_screen"
+            android:parentActivityName=".UserInterface.SplashScreen"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.shirucodes.angaza.UserInterface.SplashScreen" />
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".UserInterface.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
