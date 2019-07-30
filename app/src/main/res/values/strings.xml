@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Angaza</string>
+    <string name="preview_item">You have not verified news yet. Paste a link to verify</string>
 </resources>
