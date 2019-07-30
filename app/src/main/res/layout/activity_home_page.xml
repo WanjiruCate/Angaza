@@ -5,35 +5,37 @@
     android:id="@+id/home"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    tools:context=".HomePage">
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="0dp"
             android:layout_marginTop="0dp"
             android:layout_marginEnd="0dp"
             android:layout_marginRight="0dp"
+            android:layout_weight="1"
             android:background="@color/grey_light"
+            android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:orientation="vertical"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            >
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
                 android:layout_marginBottom="16dp"
-                android:layout_marginTop="16dp">
+                android:orientation="horizontal">
 
 
                 <androidx.appcompat.widget.AppCompatImageView
@@ -57,48 +59,54 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
+                android:layout_marginBottom="16dp"
                 android:background="@color/grey_dark"
                 android:textColorHint="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="71dp"
-                android:layout_marginBottom="16dp">
+                tools:layout_editor_absoluteY="71dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txt_paste"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
                     android:hint="Paste Link to verify"
-                    />
+                    android:linksClickable="true"
+                    android:onClick="paste_link" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
-        <LinearLayout
+
+       <!-- <LinearLayout
             android:layout_width="match_parent"
-            android:layout_weight="3"
-            android:layout_height="0dp">
+            android:layout_height="0dp"
+            android:layout_weight="3">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:text="Recent Searches"
-                android:paddingTop="8dp"
-                android:layout_margin="16dp"
-                android:textColor="@color/grey_dark"
-                />
-            <ListView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="10">
 
-            </ListView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:background="@drawable/border_line"
+                    android:padding="10dp"
+                    android:text="Recent Searches"
+                    android:textColor="@color/grey_dark" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="3"
+                    android:scrollbars="vertical">
+
+                </androidx.recyclerview.widget.RecyclerView>
             </LinearLayout>
         </LinearLayout>
+    </LinearLayout>-->
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.shirucodes.angaza.Home;
+import com.shirucodes.angaza.HomePage;
 import com.shirucodes.angaza.R;
 
 public class StartScreen2 extends AppCompatActivity {
@@ -23,7 +23,7 @@ public class StartScreen2 extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(StartScreen2.this, Home.class);
+                Intent intent = new Intent(StartScreen2.this, HomePage.class);
                 startActivity(intent);
             }
         });
