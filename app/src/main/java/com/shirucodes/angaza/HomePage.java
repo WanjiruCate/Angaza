@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Adapter;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.shirucodes.angaza.adapters.HistoryAdapter;
 import com.shirucodes.angaza.models.Verification;
@@ -33,6 +34,7 @@ public class HomePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+
 
         paste = findViewById(R.id.txt_paste);
         recyclerView = findViewById(R.id.recentsearchRecyclerview);
