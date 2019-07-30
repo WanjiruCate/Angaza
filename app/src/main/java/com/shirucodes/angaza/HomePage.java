@@ -1,5 +1,7 @@
 package com.shirucodes.angaza;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -37,8 +39,10 @@ public class HomePage extends AppCompatActivity {
         adapter = new HistoryAdapter(verifications);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-
-        verifications.add(new Verification("30th July 2019", "Devox releases a new version of ubuntu"));
+        Verification v = new Verification("30th July 2019", "Devox releases a new version of ubuntu");
+        Verification v2 = new Verification("30th July 2019", "Devox releases a new version of ubuntu");
+        verifications.add(v);
+        verifications.add(v2);
         adapter.notifyDataSetChanged();
 
 

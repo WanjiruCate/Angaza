@@ -115,7 +115,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recentsearchRecyclerview"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:paddingLeft="5dp"
                 android:paddingRight="4dp">
 
