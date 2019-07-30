@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static android.content.Context.CLIPBOARD_SERVICE;
+
 public class HomePage extends AppCompatActivity {
 
     TextView paste;

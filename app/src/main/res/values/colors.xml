@@ -8,4 +8,8 @@
     <color name="grey_light">#52544a</color>
     <color name="grey_dark">#32332e</color>
     <color name="green">#348a3a</color>
+    <color name="landing_background">#37424A</color>
+    <color name="fab_color">#00E5A3</color>
+    <color name="home_appbar">#37424A</color>
+    <color name="text_background">#000000</color>
 </resources>

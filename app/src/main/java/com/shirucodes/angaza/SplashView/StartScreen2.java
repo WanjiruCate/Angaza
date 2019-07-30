@@ -25,6 +25,7 @@ public class StartScreen2 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(StartScreen2.this, HomePage.class);
                 startActivity(intent);
+                finish();
             }
         });
     }
