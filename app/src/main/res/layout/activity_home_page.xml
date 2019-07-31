@@ -73,12 +73,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
+                    android:hint="@string/search_link"
                     android:fontFamily="Titillium Web"
-                    android:hint="Paste Link to verify"
-                    android:linksClickable="true"
-                    android:onClick="paste_link"
+                    android:textColorHint="#37424A"
                     android:textColor="#37424A"
-                    android:textColorHint="#37424A" />
+                    android:linksClickable="true"
+                    android:onClick="paste_link" />
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
@@ -99,8 +99,9 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_weight="1"
                     android:padding="10dp"
-                    android:text="Recent Searches"
+                    android:text="@string/recent_searches"
                     android:textColor="@color/grey_dark" />
+
 
             </LinearLayout>
         </LinearLayout>
