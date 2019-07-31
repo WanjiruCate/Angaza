@@ -107,13 +107,13 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="6dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginRight="6dp"
                     android:layout_marginBottom="10dp"
                     android:gravity="center_vertical"
                     android:paddingTop="6dp"
-                        android:text="CLEAR ALL"
-                    android:textColor="@color/colorPrimary"/>
+                    android:text="CLEAR ALL"
+                    android:textColor="@color/colorPrimary" />
 
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
