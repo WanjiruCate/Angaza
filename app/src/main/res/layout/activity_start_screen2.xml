@@ -42,7 +42,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginBottom="24dp"
-        android:text="Start verifying News -->"
+        android:text="@string/start_verifying"
         android:typeface="normal"
         android:fontFamily="Titillium"
         app:layout_constraintBottom_toBottomOf="parent"

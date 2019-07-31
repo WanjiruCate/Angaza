@@ -8,13 +8,18 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.SparseLongArray;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Toolbar;
 
+import com.shirucodes.angaza.SplashView.SplashScreen;
 import com.shirucodes.angaza.adapters.HistoryAdapter;
 import com.shirucodes.angaza.models.Verification;
 
@@ -29,13 +34,14 @@ public class HomePage extends AppCompatActivity {
     RecyclerView recyclerView;
     ArrayList<Verification> verifications = new ArrayList<>();
     HistoryAdapter adapter;
+    Context mContext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
-
+        mContext = getApplicationContext();
         paste = findViewById(R.id.txt_paste);
         recyclerView = findViewById(R.id.recentsearchRecyclerview);
         adapter = new HistoryAdapter(verifications);
@@ -64,8 +70,20 @@ public class HomePage extends AppCompatActivity {
         ClipData.Item item = clipData.getItemAt(0);
 
         paste.setText(item.getText().toString());
+        saveInfo();
 
         Toast.makeText(HomePage.this, "We have accessed your copied link ' " + item.getText().toString() + " .' Kindly give us a moment to run it against our model"
                 , Toast.LENGTH_LONG).show();
+
+        Intent intent = new Intent(HomePage.this, Results.class);
+        startActivity(intent);
+    }
+
+    public void saveInfo() {
+        SharedPreferences sharedpreferences = mContext.getSharedPreferences("database", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+        editor.putString("link", paste.getText().toString());
+        editor.commit();
+
     }
 }

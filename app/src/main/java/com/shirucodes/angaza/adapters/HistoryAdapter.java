@@ -17,7 +17,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryH
 
     private ArrayList<Verification> verificationList;
     private int itemcount = 0; // yet to implement
-
+// no need for this line //git
     public HistoryAdapter(ArrayList<Verification> verificationList) {
         this.verificationList = verificationList;
 
@@ -33,7 +33,7 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryH
             itemcount = 1;
             view = inflater.inflate(R.layout.recent_search_item, parent, false);
         } else {
-            view = inflater.inflate(R.layout.recent_search_item, parent, false);
+            view = inflater.inflate(R.layout.empty_preview_item, parent, false);
         }
 
         return new HistoryHolder(view);
