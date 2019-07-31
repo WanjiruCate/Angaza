@@ -3,107 +3,129 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/home"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".HomePage">
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:scrollbarAlwaysDrawHorizontalTrack="false"
-        android:scrollbarAlwaysDrawVerticalTrack="true">
+        android:layout_height="wrap_content"
+        android:background="@color/home_appbar"
+        android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/logobar"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginStart="0dp"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginRight="0dp"
-            android:layout_weight="1"
-            android:background="@color/home_appbar"
-            android:orientation="vertical"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
 
-            <LinearLayout
-                android:id="@+id/logobar"
-                android:layout_width="match_parent"
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginBottom="16dp"
-                android:orientation="horizontal">
+                android:layout_weight="1"
+                android:src="@drawable/ic_menu_black_24dp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="8"
+                android:src="@mipmap/minilogo_foreground_layer" />
+        </LinearLayout>
 
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="1"
-                    android:src="@drawable/ic_menu_black_24dp" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="0dp"
-                    android:layout_height="50dp"
-                    android:layout_weight="8"
-                    android:src="@mipmap/minilogo_foreground_layer" />
-            </LinearLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="16dp"
-                android:background="@color/text_background"
-                android:textColorHint="#37424A"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="71dp">
+                android:backgroundTint="@color/fab_color"
+                android:paddingBottom="10dp">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txt_paste"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
                     android:layout_marginLeft="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/text_background"
                     android:fontFamily="Titillium Web"
                     android:hint="Paste Link to verify"
                     android:linksClickable="true"
                     android:onClick="paste_link"
+                    android:padding="14dp"
                     android:textColor="#37424A"
                     android:textColorHint="#37424A" />
-            </com.google.android.material.textfield.TextInputLayout>
+            </androidx.cardview.widget.CardView>
 
-        </LinearLayout>
+        </RelativeLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="3">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_weight="1"
-                    android:padding="10dp"
-                    android:text="Recent Searches"
-                    android:textColor="@color/grey_dark" />
-
-            </LinearLayout>
-        </LinearLayout>
     </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingTop="2dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingTop="6dp"
+                    android:text="RECENT VERIFICATIONS" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingTop="6dp"
+                        android:text="CLEAR ALL"
+                    android:textColor="@color/colorPrimary"/>
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recentsearchRecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="4dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
 </LinearLayout>
