@@ -3,8 +3,11 @@ package com.shirucodes.angaza.database.helpers;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import com.shirucodes.angaza.database.databasecontacts.DatabaseContract;
+
+import static android.content.ContentValues.TAG;
 
 
 public class AngazaDatabaseOpenHelper extends SQLiteOpenHelper {
@@ -18,8 +21,10 @@ public class AngazaDatabaseOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(DatabaseContract.SQL_DELETE_RECENT_VERIFICATION_TABLE);
+        Log.e(TAG, "onCreate db: " + DatabaseContract.SQL_CREATE_RECENT_VERIFICATION_TABLE);
+        db.execSQL(DatabaseContract.SQL_CREATE_RECENT_VERIFICATION_TABLE);
     }
+
 
     @Override
     public void onUpgrade(SQLiteDatabase database, int oldVersion, int newVersion) {
