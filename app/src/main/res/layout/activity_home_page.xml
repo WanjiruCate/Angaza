@@ -107,14 +107,13 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
-                    android:layout_marginRight="6dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginRight="6dp"
                     android:layout_marginBottom="10dp"
                     android:gravity="center_vertical"
                     android:paddingTop="6dp"
                     android:text="CLEAR ALL"
-                    android:textColor="@color/colorPrimary"/>
-
+                    android:textColor="@color/colorPrimary" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -123,9 +122,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="5dp"
-            android:paddingRight="4dp">git
-
-        </androidx.recyclerview.widget.RecyclerView>
+            android:paddingRight="4dp"></androidx.recyclerview.widget.RecyclerView>
 
     </LinearLayout>
 </LinearLayout>

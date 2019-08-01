@@ -17,7 +17,8 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryH
 
     private ArrayList<Verification> verificationList;
     private int itemcount = 0; // yet to implement
-// no need for this line //git
+
+    // no need for this line //git
     public HistoryAdapter(ArrayList<Verification> verificationList) {
         this.verificationList = verificationList;
 
