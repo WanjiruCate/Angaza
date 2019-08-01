@@ -4,8 +4,12 @@ public class Verification {
 
     String date;
     String description;
+    int score;
 
-    public Verification(String date, String description) {
+    public Verification() {
+    }
+
+    public Verification(String date, String description, int score) {
         this.date = date;
         this.description = description;
     }
@@ -26,11 +30,20 @@ public class Verification {
         this.description = description;
     }
 
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
     @Override
     public String toString() {
         return "Verification{" +
                 "date='" + date + '\'' +
                 ", description='" + description + '\'' +
+                ", score=" + score +
                 '}';
     }
 }
